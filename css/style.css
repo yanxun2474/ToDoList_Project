@@ -178,8 +178,8 @@ body{
     height: 100%;
     width: 100%;
     margin: 0;
-  }
-  .checkbox span::before {
+}
+.checkbox span::before {
     content: "";
     position: absolute;
     left: 0.5rem;
@@ -191,8 +191,8 @@ body{
     border: 1px solid #333;
     pointer-events: none;
     transition: 0.3s ease;
-  }
-  .checkbox span::after {
+}
+.checkbox span::after {
     content: "";
     position: absolute;
     left: 14px;
@@ -206,15 +206,28 @@ body{
     pointer-events: none;
     opacity: 0;
     transition: 0.3s ease;
-  }
-  .checkbox input:checked ~ span {
+}
+.checkbox input:checked ~ span {
     color: #9f9a91;
     text-decoration: line-through;
-  }
-  .checkbox input:checked ~ span::before {
+}
+.checkbox input:checked ~ span::before {
     border-color: transparent;
     transform: translateY(-50%) scale(0);
-  }
-  .checkbox input:checked ~ span::after {
+}
+.checkbox input:checked ~ span::after {
     opacity: 1;
-  }
+}
+
+
+/*待辦清單頁尾樣式*/
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem 1rem 2rem;
+}
+.card-footer a{
+    text-decoration: none;
+    color: #9f9a91;
+}
