@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的待辦清單</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <h1>TO DO LIST</h1>
+        <div class="createItem">
+            <input type="text" placeholder="請輸入待辦事項" class="input" required>
+            <a class="addItemBtn" href="#">+</a>
+        </div>
+        <div class="card">
+                <ul class="filter">
+                    <li class="active"><a href="#1">全部</a></li>
+                    <li><a href="#2">待完成</a></li>
+                    <li><a href="#3">已完成</a></li>
+                </ul>
+            <div class="card-content">
+                <ul class="list">
+                    <li>
+                        
+                        <label class="checkbox" for="">
+                        <input type="checkbox" checked="checked">
+                        <span>1112222</span>
+                        </label>
+                        <a href="#" class="delete"></a>
+                    </li>
+                    <li>
+                        <label class="checkbox" for="">
+                        <input type="checkbox" />
+                        <span>把冰箱發霉的檸檬拿去丟</span>
+                        </label>
+                        <a href="#" class="delete"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+        
+    </div>
+</body>
+</html>

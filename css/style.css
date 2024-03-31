@@ -1,0 +1,220 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+.wrap{
+    margin: 0 auto;
+    width: 500px;
+}
+
+h1{
+    font-size: 56px;
+    text-align: center;
+    padding-top: 48px;
+}
+body{
+    background-color: bisque;
+}
+
+/*輸入區塊樣式*/
+.createItem{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 26px;
+}
+.input{
+    padding-left: 24px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+}
+.addItemBtn{
+    background-color: #333333;
+    padding: 3px 10px;
+    margin: 5px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/*篩選清單樣式*/
+.card{
+    margin-top: 8px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+.filter{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid #EFEFEF;
+    li{
+        /* padding: 16px 63px 16px 61px; */
+        
+        &.active{
+            border-bottom: 2px solid #000000;
+            a{color: #000000;}
+        }
+        a{
+            text-decoration: none;
+            color: #9f9a91;
+            display: block;
+            padding: 16px 63px 16px 61px;
+        }
+        a:hover{
+            color:brown;
+            font-weight: bold;
+        }
+    } 
+}
+
+/*代辦清單樣式*/
+.card-content{
+    padding: 16px;
+}
+
+.list li{
+    position: relative;
+    padding-right: 2rem;
+}
+
+.list li a.delete{
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: #333;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background: #000;
+    background-image: url("../image/x.jpeg");
+    background-size: contain;
+}
+
+.list li:hover a.delete{
+    opacity: 1;
+}
+
+.checkbox{
+    position: relative;
+    user-select: none;
+    width: 100%;
+    display: block;
+    padding-left: 44px;
+    cursor: pointer;
+}
+.checkbox span{
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    line-height: 1.5;
+}
+.checkbox input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .checkbox span::before {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%) scale(1);
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    pointer-events: none;
+    transition: 0.3s ease;
+  }
+  .checkbox span::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 27%;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 0.5rem;
+    border-radius: 1px;
+    border-bottom: 3px solid #ffd370;
+    border-right: 3px solid #ffd370;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  .checkbox input:checked ~ span {
+    color: #9f9a91;
+    text-decoration: line-through;
+  }
+  .checkbox input:checked ~ span::before {
+    border-color: transparent;
+    transform: translateY(-50%) scale(0);
+  }
+  .checkbox input:checked ~ span::after {
+    opacity: 1;
+  }
