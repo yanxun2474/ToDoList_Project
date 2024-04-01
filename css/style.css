@@ -104,25 +104,27 @@ body{
     display: flex;
     justify-content: space-evenly;
     border-bottom: 2px solid #EFEFEF;
-    li{
-        /* padding: 16px 63px 16px 61px; */
-        
-        &.active{
-            border-bottom: 2px solid #000000;
-            a{color: #000000;}
-        }
-        a{
-            text-decoration: none;
-            color: #9f9a91;
-            display: block;
-            padding: 16px 63px 16px 61px;
-        }
-        a:hover{
-            color:brown;
-            font-weight: bold;
-        }
-    } 
+    user-select: none;
 }
+.filter li{
+    text-decoration: none;
+    color: #9f9a91;
+    display: block;
+    padding: 16px 63px 16px 61px;
+}
+.filter li.active{
+    border-bottom: 2px solid #000000;
+    color: #000000;
+    font-weight: bold;
+}
+    
+.filter li:hover{
+    color:brown;
+    font-weight: bold;
+    cursor: pointer;
+}
+    
+
 
 /*代辦清單樣式*/
 .card-content{
